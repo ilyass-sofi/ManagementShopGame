@@ -109,8 +109,11 @@ public class ItemDrawer : MonoBehaviour
             case Components.BasicMaterial.Iron:
                 compSprite = components[1].Sprite;
                 break;
-            case Components.BasicMaterial.Gold:
+            case Components.BasicMaterial.Bronze:
                 compSprite = components[2].Sprite;
+                break;
+            case Components.BasicMaterial.Gold:
+                compSprite = components[3].Sprite;
                 break;
             default:
                 break;

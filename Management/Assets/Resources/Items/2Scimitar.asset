@@ -16,7 +16,7 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 3179b63c2d888a743bd6cd27ab41739c, type: 3}
   rarity: 2
   comps:
-  - amount: 5
+  - amount: 2
     type: 0
-  - amount: 1
-    type: 2
+  - amount: 5
+    type: 1

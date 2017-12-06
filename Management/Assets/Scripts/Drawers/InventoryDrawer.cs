@@ -26,7 +26,6 @@ public class InventoryDrawer : MonoBehaviour {
     private void Start()
     {
         DisplayItems();
-
     }
 
     public void DisplayItems()

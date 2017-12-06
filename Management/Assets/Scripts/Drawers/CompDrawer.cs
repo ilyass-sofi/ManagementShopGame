@@ -4,18 +4,34 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class CompDrawer : MonoBehaviour
-{   
+{
+
+    public static CompDrawer compDrawer;
+
 
     [SerializeField] private GameObject topBar;
     private GameObject compPrefab;
     private BasicMaterial[] components;
 
+    public BasicMaterial[] Components
+    {
+        get { return components; }
+        set { components = value;}
+    }
+
     void Awake ()
     {
+
+        if (compDrawer != null)
+            Destroy(compDrawer);
+        else
+            compDrawer = this;
+
+        DontDestroyOnLoad(this);
+
+
         compPrefab = Resources.Load("Comp") as GameObject;
         components = Resources.LoadAll("Components", typeof(BasicMaterial)).Cast<BasicMaterial>().ToArray();
-       
-       
     }
 
     private void Start()
@@ -25,6 +41,11 @@ public class CompDrawer : MonoBehaviour
 
     public void DisplayComps()
     {
+        foreach (Transform child in topBar.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
         int counter = 0;
         foreach (KeyValuePair<Components.BasicMaterial, int> pair in Inventory.inventory.compInventory)
         {

@@ -9,16 +9,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 19ee1f5274b5421498604b9cde4fcdcf, type: 3}
-  m_Name: 3Golden Sword
+  m_Name: 4Executor
   m_EditorClassIdentifier: 
-  itemName: Golden Sword
-  price: 400
-  sprite: {fileID: 21300000, guid: 9029ab443a508ba46b94357ae165120c, type: 3}
-  rarity: 3
+  itemName: Executor
+  price: 1000
+  sprite: {fileID: 21300000, guid: 25d57aceff5e8d14fae7a2222bc49c37, type: 3}
+  rarity: 4
   comps:
-  - amount: 10
+  - amount: 20
     type: 0
-  - amount: 5
+  - amount: 12
     type: 1
-  - amount: 3
+  - amount: 7
+    type: 2
+  - amount: 5
     type: 3

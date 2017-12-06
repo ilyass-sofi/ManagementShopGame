@@ -9,9 +9,13 @@ public class Components
     public BasicMaterial type;
     public enum BasicMaterial
     {
+        Wood,
         Iron,
-        Gold,
-        Wood
+        Bronze,
+        Gold
+        
     };
+
+   
 	
 }
