@@ -9,7 +9,15 @@ public class BasicMaterial : Item
 
     private int upgradeCurrentPrice;
 
+    public int UpgradeCurrentPrice
+    {
+        get { return upgradeCurrentPrice; }
+        set { upgradeCurrentPrice = value; }
+    }
+
     public float upgradeMultiplicator;
 
     public float timePerUnit;
+
+    
 }

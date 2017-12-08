@@ -28,9 +28,8 @@ public class MaterialCraft : MonoBehaviour {
         for (int i = 0; i < materialsGrid.transform.childCount; i++)
         {
             UpdateCraft(i, CompDrawer.compDrawer.Components[i].timePerUnit);
+            materialsGrid.transform.GetChild(i).GetChild(3).GetComponent<Text>().text = CompDrawer.compDrawer.Components[i].UpgradeCurrentPrice + "";
         }
-        
-
     }
 
     public void UpdateCraft(int i, float time)
@@ -42,5 +41,17 @@ public class MaterialCraft : MonoBehaviour {
             materialsGrid.transform.GetChild(i).GetChild(0).GetComponent<Image>().fillAmount = 0;
             Inventory.inventory.CraftMaterial(BasicMaterials[i]);
         }
+    }
+
+    public void UpgradeCraft(BasicMaterial mat)
+    {
+        if (Inventory.inventory.Gold >= mat.UpgradeCurrentPrice)
+        {
+            Inventory.inventory.Gold -= mat.UpgradeCurrentPrice;
+            mat.UpgradeCurrentPrice = (int)(mat.upgradeMultiplicator * mat.UpgradeCurrentPrice);
+            mat.timePerUnit = (float)(mat.timePerUnit / 1.2);
+        }
+
+        
     }
 }

@@ -7,7 +7,6 @@ public class ItemDrawer : MonoBehaviour
 
     public static ItemDrawer itemDrawer;
 
-
     public Color[] rarityColors;
     [SerializeField] private GameObject grid;
 

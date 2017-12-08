@@ -19,7 +19,6 @@ public class InventoryDrawer : MonoBehaviour {
 
         DontDestroyOnLoad(this);
 
-
         itemInventory = Resources.Load("ItemInventory") as GameObject;
     }
 
